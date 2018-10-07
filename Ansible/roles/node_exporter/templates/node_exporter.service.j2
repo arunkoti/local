@@ -1,0 +1,9 @@
+[Unit]
+Description=Service which runs Node Exporter for Prometheus 
+ 
+[Service]
+User={{ node_exporter_run_user_info['user'] }}
+ExecStart=/usr/bin/node_exporter
+ 
+[Install]
+WantedBy=multi-user.target

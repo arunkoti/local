@@ -1,0 +1,15 @@
+[test1]
+master01.shirishlnx.com 
+
+[test2]
+master.shirishlnx.com
+
+[test:children]
+test1
+test2
+
+[all:vars]
+ansible_connection=ssh
+ansible_user = "{{ SSH['USER'] }}"
+ansible_ssh_pass = "{{ SSH['PSW'] }}"
+ansible_ssh_private_key_file = "{{ SSH['KEY'] }}"

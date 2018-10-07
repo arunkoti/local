@@ -1,0 +1,8 @@
+---
+# defaults file for /root/Ansible/roles/node_exporter
+node_exporter_install_dir: /opt
+node_exporter_install_path: "{{ node_exporter_install_dir }}/prometheus"
+node_exporter_run_user_info: 
+  group: root
+  user: root
+node_exporter_url: 'http://localhost:9100/metrics'

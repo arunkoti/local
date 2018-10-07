@@ -1,0 +1,6 @@
+---
+SSH:
+  PORT: 22
+  USER: shirish
+  PSW: 'x'
+  KEY: 'files/private_rsa_key'

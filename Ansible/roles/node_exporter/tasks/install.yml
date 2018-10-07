@@ -1,0 +1,19 @@
+---
+
+- name: CREATE {{ node_exporter_install_path }} DIRECTORY
+  file:
+    path: "{{ node_exporter_install_path }}"
+    state: directory
+
+- name: COPY node_exporter
+  copy: 
+    src: "../files/node_exporter" 
+    dest: "{{ node_exporter_install_path }}"
+    mode: 0755
+
+- name: SIMLINK for node_exporter
+  file:
+    path: /usr/bin/node_exporter
+    state: link
+    src: "{{ node_exporter_install_path }}/node_exporter"
+
